@@ -5,18 +5,6 @@
     <ol class="carousel-indicators">
         <li data-target="#carouselProducts" data-slide-to="0" class="active"></li>
 
-        <!--
-        TODO #2: For every product saved in our list, add an <li> that looks like the first <li> above,
-            except "0" should be replaced with the proper slide number (zero-based index).
-
-            DO NOT INCLUDE the class="active" attribute. We only want to start with the first slide being the active slide on page load.
-
-        e.g. If there are three products, then the additional output here would be:
-
-            <li data-target="#carouselProducts" data-slide-to="1"></li>
-            <li data-target="#carouselProducts" data-slide-to="2"></li>
-            <li data-target="#carouselProducts" data-slide-to="3"></li>
-        -->
         @for (var i = 1; i <= Model.Products.Count; i++)
         {
             <li data-target="#carouselProducts" data-slide-to="@i"></li>
@@ -33,18 +21,6 @@
             </div>
         </div>
 
-        <!--
-            TODO #3: For every product saved in our list, add a <div> that looks like the sample <div> below, replacing all the "..." with
-                     the appropriate data
-
-            <div class="carousel-item">
-                <img src="..." alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>...</h5>
-                    <p>Quantity Left: ..., Cost: ...</p>
-                </div>
-            </div>
-        -->
         @foreach (var item in Model.Products)
         {
             <div class="carousel-item">
